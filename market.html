@@ -38,13 +38,13 @@
 
   function displayArrayData() {
     const arrayDataDiv = document.getElementById("arrayData");
-    arrayDataDiv.innerHTML = data.join("<br>");
+    arrayDataDiv.innerHTML = cloud_data.join("<br>");
   }
 
   function addItem() {
     const newItem = document.getElementById("newItem").value;
     if (newItem) {
-      data.push(newItem);
+      cloud_data.push(newItem);
       displayArrayData();
       document.getElementById("newItem").value = "";
     }
@@ -59,9 +59,9 @@
 <script>
 function removeItem() {
     const removeItem = document.getElementById("removeItem").value;
-    const index = data.indexOf(removeItem);
+    const index = cloud_data.indexOf(removeItem);
     if (index !== -1) {
-      data.splice(index, 1);
+      cloud_data.splice(index, 1);
       displayArrayData();
       document.getElementById("removeItem").value = "";
     }
