@@ -1,7 +1,65 @@
+anguyen8234/Desktop/website/style.css */
+html {
+  height: 100%;
+  width: 100%;
+  font-family: Verdana, sans-serif;
+}
 
 body {
-    text-align: center;
-    font-family: 'Arial';
-    color: LightSeaGreen;
-    background: black;
+  margin: 0;
+  padding: 0;
+}
+
+.blue-bar {
+  width: 100%;
+  height: 90px; /* Adjust the height as needed */
+  background-color: #bcedf4;
+  position: absolute;
+  top: -10px; /* Adjust the distance from the top as needed */
+  z-index: 1;
+}
+
+p {
+  margin-top: 80px; /* Adjust the margin to ensure the text is below the blue bar */
+}
+
+.SRA {
+  z-index: 2;
+  position: absolute;
+  top: 2px; /* Adjust the distance from the top as needed */
+  left: 10px;
+}
+
+.marketbutton {
+  position: absolute;
+  top: 100px; /* Adjust the distance from the top as needed */
+  left: 10px; /* Adjust the distance from the left as needed */
+}
+
+.marketbutton button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+body { 
+  overflow: auto;
+}
+
+.input button{
+  padding: 10px 20px;
+  cursor:pointer;
+  font-size: 16px;
+}
+
+.input {
+  position: absolute;
+  top: 200px; /* Adjust the distance from the top as needed */
+  left: 10px; /* Adjust the distance from the left as needed */
+}
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  text-align: center;
 }

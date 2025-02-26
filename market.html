@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="blue-bar"></div> 
+<div class="SRA">
+  <img src="sra.png" alt="SRA" width="85" height="72">
+</div>
+
+<div class="marketbutton">
+  <button onclick="redirectToHome()">Home</button>
+</div>
+
+<div class="input">
+  <input type="text" id="newItem" placeholder="Enter new item">
+  <button onclick="addItem()">Add Item</button>
+</div>
+
+<div id="arrayData" class="centered"></div>
+
+<script>
+  let data = ["Item 1", "Item 2", "Item 3", "Item 4"];
+
+  function redirectToHome() {
+    window.location.href = "index.html";
+  }
+
+  function modifytext() {
+    document.write("hello");
+  }
+
+  function displayArrayData() {
+    const arrayDataDiv = document.getElementById("arrayData");
+    arrayDataDiv.innerHTML = data.join("<br>");
+  }
+
+  function addItem() {
+    const newItem = document.getElementById("newItem").value;
+    if (newItem) {
+      data.push(newItem);
+      displayArrayData();
+      document.getElementById("newItem").value = "";
+    }
+  }
+</script>
+
+<div class="unput">
+  <input type="text" id="removeItem" placeholder="Enter item to remove">
+  <button onclick="removeItem()">Remove Item</button>
+</div>
+
+<script>
+function removeItem() {
+    const removeItem = document.getElementById("removeItem").value;
+    const index = data.indexOf(removeItem);
+    if (index !== -1) {
+      data.splice(index, 1);
+      displayArrayData();
+      document.getElementById("removeItem").value = "";
+    }
+  }
+
+
+  // Call the function to display the array data
+  displayArrayData();
+</script>
+
+</body>
+
+</html>
